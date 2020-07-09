@@ -13,6 +13,8 @@ var app = express();
 //Import the mongoose module
 var mongoose = require('mongoose');
 mongoose.set('useUnifiedTopology', true);
+// https://mongoosejs.com/docs/deprecations.html#findandmodify
+mongoose.set('useFindAndModify', false);
 
 //Set up default mongoose connection
 var mongoDB = 'mongodb://127.0.0.1/local_library';
